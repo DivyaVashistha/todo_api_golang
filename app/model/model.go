@@ -31,7 +31,7 @@ func (d *Details) CompleteTask(){
 	d.IsComplete=true
 }
 
-//
+// WorkInProgressTask function marks the task as in progress
 func (d *Details) WorkInProgressTask(){
 	d.IsComplete=false
 }

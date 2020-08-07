@@ -56,3 +56,8 @@ func (a *App) handleRequest(handler RequestHandlerFunction) http.HandlerFunc{
 		handler(a.DB,w,r)
 	}
 }
+
+// Run the app on it's router
+func (a *App) Run(host string) {
+	log.Fatal(http.ListenAndServe(host, a.Router))
+}

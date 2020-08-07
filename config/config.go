@@ -7,7 +7,7 @@ type Config struct{
 type DBConfig struct{
 	Dialect string
 	Host string
-	Port string
+	Port int
 	Username string
 	Password string
 	Name string
@@ -19,7 +19,7 @@ func GetConfig() *Config{
 		DB: &DBConfig{
 			Dialect :"",
 			Host : "",
-			Port:"",
+			Port:0,
 			Username:"",
 			Password:"",
 			Name:"",

@@ -4,8 +4,11 @@ RESTful API services in Go
 
 ```
 ## Project Layout
-```   
-+-- app
-|  +--model
-|  +--handler
+```  
++-- api
+|  +-- app
+   |  +--model
+   |  +--handler
+   |  +--app.go
+|  +-- config 
 ```

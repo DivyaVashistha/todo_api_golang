@@ -11,4 +11,5 @@ RESTful API services in Go
    |  +--handler
    |  +--app.go
 |  +-- config 
+|  +--main.go
 ```

@@ -10,7 +10,7 @@ import(
 // GetAllUsers handler fetches details of all users in the system
 func GetAllUsers(db *gorm.DB,w http.ResponseWriter,r *http.Request){
 	users:=[]model.User{}
-	db.Preload("Topics").Preload("Details").Find(&users)
+	db.Preload("Topics").Preload("Topics.Details").Find(&users)
 	respondJSON(w,http.StatusOK,users)
 }
 

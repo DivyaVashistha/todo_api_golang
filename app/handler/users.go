@@ -7,7 +7,17 @@ import(
 	"github.com/jinzhu/gorm"
 )
 
-// GetAllUsers handler fetches details of all users in the system
+// GetPets swagger:route GET /users pets listPets
+//
+// Lists the pets known to the store.
+//
+// By default it will only lists pets that are available for sale.
+// This can be changed with the status flag.
+//
+// Deprecated: False
+// Responses:
+// 		default: genericError
+// 		    200: []pet
 func GetAllUsers(db *gorm.DB,w http.ResponseWriter,r *http.Request){
 	users:=[]model.User{}
 	db.Preload("Topics").Preload("Topics.Details").Find(&users)

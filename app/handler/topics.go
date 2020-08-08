@@ -9,7 +9,6 @@ import (
 
 // GetAllTopics handler to fetch details of all topics of a user
 func GetAllTopics(db *gorm.DB, w http.ResponseWriter, r *http.Request){
-	
 	vars:=mux.Vars(r) // get map of all variables from the request
 	username:=vars["user_name"] // get value of username from the map
 	user:=getUserOr404(db,username,w,r) // get details of user corresponding to username

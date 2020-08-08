@@ -1,0 +1,40 @@
+consumes:
+- application/json
+host: localhost:3000
+info:
+  description: |-
+    the purpose of this application is to provide an application
+    that is using go code to define an API
+
+    This should demonstrate all the possible comment annotations
+    that are available to turn go code into a fully compliant swagger 2.0 spec
+  termsOfService: |-
+    there are no TOS at this moment, use at your own risk we take no responsibility
+    Documentation of API.
+  title: ToDo RESTful API.
+  version: 0.0.1
+paths:
+  /users:
+    get:
+      deprecated: true
+      description: |-
+        By default it will only lists pets that are available for sale.
+        This can be changed with the status flag.
+      operationId: listPets
+      responses:
+        "200":
+          $ref: '#/responses/pet'
+        default:
+          $ref: '#/responses/genericError'
+      summary: Lists the pets known to the store.
+      tags:
+      - pets
+produces:
+- application/json
+schemes:
+- http
+- https
+securityDefinitions:
+  basic:
+    type: basic
+swagger: "2.0"

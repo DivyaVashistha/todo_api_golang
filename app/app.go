@@ -37,7 +37,7 @@ a.setRouters()
 
 // setRouters sets all the required routes
 func (a *App) setRouters(){
-	a.Get("/topics",a.handleRequest(handler.GetAllTopics))
+	a.Get("/topics",a.handleRequest(handler.GetAllUsers))
 	a.Post("/users", a.handleRequest(handler.CreateUser))
 }
 
